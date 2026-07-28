@@ -155,3 +155,16 @@
     terminal.style.transform = 'rotateY(-5deg) rotateX(2deg)';
   });
 })();
+
+// ===== Inject Certificate URLs from Config =====
+(function () {
+  if (!window.CONFIG || !window.CONFIG.certs) return;
+
+  document.querySelectorAll('.cert-card[data-cert]').forEach(card => {
+    const key = card.dataset.cert;
+    const url = window.CONFIG.certs[key];
+    if (url) {
+      card.href = url;
+    }
+  });
+})();
