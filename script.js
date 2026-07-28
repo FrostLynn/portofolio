@@ -108,7 +108,7 @@
 // ===== Scroll Reveal Animation =====
 (function () {
   const reveals = document.querySelectorAll(
-    '.skill-card, .project-card, .timeline-content, .stat, .about-text, .contact-link'
+    '.skill-card, .project-card, .timeline-content, .stat, .about-text, .contact-link, .cert-card'
   );
 
   if (!reveals.length) return;
