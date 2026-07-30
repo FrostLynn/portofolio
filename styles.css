@@ -452,6 +452,10 @@ ul { list-style: none; }
   transition: border-color var(--transition), transform var(--transition);
   display: flex;
   flex-direction: column;
+  min-width: 320px;
+  max-width: 360px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -508,6 +512,13 @@ ul { list-style: none; }
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--text-muted);
+}
+
+.project-btn {
+  margin-top: 16px;
+  align-self: flex-start;
+  font-size: 0.78rem;
+  padding: 8px 20px;
 }
 
 /* ===== Experience / Timeline ===== */
