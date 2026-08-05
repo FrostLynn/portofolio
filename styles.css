@@ -326,9 +326,32 @@ ul { list-style: none; }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 64px;
   align-items: start;
+}
+
+.about-photo {
+  position: relative;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  filter: grayscale(30%);
+  transition: filter var(--transition), border-color var(--transition);
+}
+
+.about-photo img:hover {
+  filter: grayscale(0%);
+  border-color: var(--accent);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .about-text {
@@ -348,8 +371,7 @@ ul { list-style: none; }
 
 .about-stats {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
+  gap: 16px;
 }
 
 .stat {
@@ -805,7 +827,12 @@ ul { list-style: none; }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
+  }
+
+  .about-photo {
+    max-width: 180px;
+    margin: 0 auto;
   }
 
   .about-stats {
