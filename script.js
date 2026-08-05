@@ -167,4 +167,9 @@
       card.href = url;
     }
   });
+
+  const cvBtn = document.getElementById('cv-btn');
+  if (cvBtn && window.CONFIG.certs.cv) {
+    cvBtn.href = window.CONFIG.certs.cv;
+  }
 })();
